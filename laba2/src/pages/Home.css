@@ -1,0 +1,276 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+.home-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.entity-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.entity-list {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.entity-list:hover {
+  transform: translateY(-5px);
+}
+
+.entity-list h2 {
+  color: #2980b9;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.entity-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.entity-list li {
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.entity-list a {
+  color: #34495e;
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+}
+
+.entity-list a:hover {
+  color: #3498db;
+}
+
+.actions {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.action-button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.action-button:hover {
+  background-color: #2980b9;
+}
+
+.add-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.action-button[href*="type=Инцидент"] {
+  background-color: #e74c3c;
+}
+
+.action-button[href*="type=Инцидент"]:hover {
+  background-color: #c0392b;
+}
+
+.action-button[href*="type=Сотрудник"] {
+  background-color: #2ecc71;
+}
+
+.action-button[href*="type=Сотрудник"]:hover {
+  background-color: #27ae60;
+}
+
+@media (max-width: 768px) {
+  .add-buttons {
+    flex-direction: column;
+  }
+  
+  .action-button {
+    width: 100%;
+  }
+}
+
+.entity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.entity-link {
+  flex-grow: 1;
+  color: #34495e;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.entity-link:hover {
+  color: #3498db;
+}
+
+.delete-button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  transition: background 0.3s;
+}
+
+.delete-button:hover {
+  background: #c0392b;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-button.confirm {
+  background: #e74c3c;
+  color: white;
+}
+
+.modal-button.cancel {
+  background: #95a5a6;
+  color: white;
+}
+
+.entity-name {
+  color: #333;
+  padding: 8px 0;
+  display: inline-block;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.incident-list {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(107, 70, 193, 0.3);
+  border-radius: 50%;
+  border-top-color: #6b46c1;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.mini-spinner, .button-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.mini-spinner {
+  width: 12px;
+  height: 12px;
+  border-width: 2px;
+}
+
+.delete-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Администратор",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Иванов Иван",
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "id": "d7bb",
+      "name": "Nikita",
+      "email": "nik@a.ru",
+      "password": "123456",
+      "role": "user"
+    }
+  ],
+  "incidents": [
+    {
+      "id": "1",
+      "title": "Утечка данных",
+      "type": "Кибербезопасность",
+      "date": "2024-01-15",
+      "severity": "Высокий",
+      "status": "Закрыт",
+      "description": "Обнаружена попытка несанкционированного доступа",
+      "reportedBy": 1
+    },
+    {
+      "id": "e900",
+      "title": "Украли арбуз :(",
+      "type": "Человеческий фактор",
+      "date": "2025-05-17",
+      "severity": "Критический",
+      "status": "Открыт",
+      "description": "Не доглядели",
+      "actionsTaken": "Никаких"
+    }
+  ]
+}
